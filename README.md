@@ -1,6 +1,6 @@
 # ahoSelector
 
-jQuery select custom modulue.
+jQuery select custom module.
 
 demo: [https://ahmetsagirli.com.tr/ahoSelector/](https://ahmetsagirli.com.tr/ahoSelector/)
     
