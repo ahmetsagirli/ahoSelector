@@ -36,10 +36,10 @@ demo: [https://ahmetsagirli.com.tr/ahoSelector/](https://ahmetsagirli.com.tr/aho
             ahoSelector.run();
         });
 
-        // select checked value; // dom, value
+        // select checked value; (dom, value)
         ahoSelector.selected('#fruits', 1);
         ahoSelector.selected('#branchs', 'oppo');
 
-        // refresh select; // dom
+        // refresh select; (dom)
         ahoSelector.refresh('#fruits');
 	</script>

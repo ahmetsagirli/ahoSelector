@@ -100,6 +100,13 @@
             }
         }
     }
+    &.up{
+        .items{
+            bottom: auto;
+            top: 1px;
+            transform: translateY(-100%);
+        }
+    }
     &.active{
         span{
             &:after{

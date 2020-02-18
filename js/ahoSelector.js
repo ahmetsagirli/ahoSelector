@@ -9,6 +9,7 @@ var ahoSelector = {
         var tmp = $(t);
         tmp.parent().find('.ahoselector').remove();
         ahoSelector.create( tmp );
+        ahoSelector.positionControl(t);
     },
     selected: function(t, val){
         $(t).parent().find('.ahoselector .items .item').removeClass('active');
@@ -36,6 +37,14 @@ var ahoSelector = {
         $(t).parent().find('.ahoselector .items .item:first').addClass('active');
 
         ahoSelector.events( t.parent().find('.ahoselector') );
+    },
+    positionControl: function(t){
+        $('.ahoselector').removeClass('active');
+        if($(window).scrollTop() + $(t).offset().top + $(t).find('.items').outerHeight() + 50 <= $(window).height()){
+            $(t).removeClass('up');
+        }else{
+            $(t).addClass('up');
+        }
     },
     events: function(t){
         t.click(function(e){
@@ -84,6 +93,13 @@ var ahoSelector = {
                     $(this).addClass('active')
                 }
             }
+        });
+        ahoSelector.positionControl(t);
+        $(window).scroll(function(){
+            ahoSelector.positionControl(t);
+        });
+        $(window).resize(function(){
+            ahoSelector.positionControl(t);
         });
     },
     function: {
